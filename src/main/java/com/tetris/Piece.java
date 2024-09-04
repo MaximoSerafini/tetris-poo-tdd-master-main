@@ -44,7 +44,6 @@ public class Piece {
         return y; 
     }
 
-
     //Método para rotar la pieza en sentido horario
     public void rotate() {
         int n = piece.length;
@@ -52,11 +51,12 @@ public class Piece {
         
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                rotatedPiece[j][n - 1 - i] = piece[i][j];
+                rotatedPiece[n - 1 - j][i] = piece[i][j]; //al reves!
             }
         }
         
         this.piece = rotatedPiece;
     }
-    
 }
+
+
