@@ -1,6 +1,6 @@
 package com.tetris;
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
@@ -80,6 +80,38 @@ public class TestTetris1 {
         };
 
         int[][] formaActual = pieceDog.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
+    @Test
+    public void la_piece_square_tiene_la_forma_correcta(){
+        PieceSquare pieceSquare = new PieceSquare();
+
+        int[][] formaEsperada = {
+            {0, 0, 0, 0},
+            {0, 0, 0, 0},
+            {1, 1, 0, 0},
+            {1, 1, 0, 0}
+        };
+
+        int[][] formaActual = pieceSquare.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
+    @Test
+    public void la_piece_t_tiene_la_forma_correcta(){
+        PieceT pieceT = new PieceT();
+
+        int[][] formaEsperada = {
+            {0, 0, 0, 0},
+            {0, 0, 0, 0},
+            {0, 1, 0, 0},
+            {1, 1, 1, 0}
+        };
+
+        int[][] formaActual = pieceT.getShape();
 
         assertArrayEquals(formaEsperada, formaActual);
     }
