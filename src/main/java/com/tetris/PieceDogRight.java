@@ -1,7 +1,7 @@
 package com.tetris;
 
-public class PieceDogaRight extends Piece{
-    public PieceDogaRight(){
+public class PieceDogRight extends Piece{
+    public PieceDogRight(){
         super(new int[][] {
             {0, 0, 0, 0},
             {0, 0, 0, 0},

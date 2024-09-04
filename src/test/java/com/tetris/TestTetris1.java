@@ -68,4 +68,20 @@ public class TestTetris1 {
         assertArrayEquals(formaEsperada, formaActual);
     }
 
+    @Test
+    public void la_piece_DogRight_tiene_la_forma_correcta(){
+        PieceDogRight pieceDog = new PieceDogRight();
+
+        int[][] formaEsperada = {
+            {0, 0, 0, 0},
+            {0, 0, 0, 0},
+            {0, 1, 1, 0},
+            {1, 1, 0, 0}
+        };
+
+        int[][] formaActual = pieceDog.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
 }
