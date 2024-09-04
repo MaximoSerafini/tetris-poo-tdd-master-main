@@ -45,13 +45,26 @@ public class Piece {
     }
 
     //Método para rotar la pieza en sentido horario
-    public void rotate() {
+    public void rotateIzq() {
         int n = piece.length;
         int[][] rotatedPiece = new int[n][n];
         
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 rotatedPiece[n - 1 - j][i] = piece[i][j]; //al reves!
+            }
+        }
+        
+        this.piece = rotatedPiece;
+    }
+
+    public void rotateDer() {
+        int n = piece.length;
+        int[][] rotatedPiece = new int[n][n];
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                rotatedPiece[j][n - 1 - i] = piece[i][j];
             }
         }
         
