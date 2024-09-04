@@ -39,6 +39,41 @@ public class TestTetris2 {
         int[][] formaActual = pieceStick.getShape();
 
         assertArrayEquals(formaEsperada, formaActual);
+    } 
+
+    @Test
+    public void girar_palo_Der_dos_veces() {
+        PieceStick pieceStick = new PieceStick();
+
+        pieceStick.rotateDer();
+        pieceStick.rotateDer();
+
+        int[][] formaEsperada = {
+            {0, 0, 0, 1},
+            {0, 0, 0, 1},
+            {0, 0, 0, 1},
+            {0, 0, 0, 1}
+        };
+
+        int[][] formaActual = pieceStick.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    } 
+
+    @Test
+    public void girar_cubo_prueba() {
+        PieceSquare pieceSquare = new PieceSquare();
+
+        pieceSquare.rotateDer();
+
+        int[][] formaEsperada = {
+            {1, 1,},
+            {1, 1,}
+        };
+
+        int[][] formaActual = pieceSquare.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
 
     } 
 }
