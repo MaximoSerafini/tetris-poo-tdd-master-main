@@ -17,7 +17,7 @@ public class PieceDog extends Piece{
             {1, 1, 0, 0},
             {1, 0, 0, 0}
         };
-
+        //aca
         setPiece(PieceDogRight);
 
         public PieceDog(int[][] piece){
