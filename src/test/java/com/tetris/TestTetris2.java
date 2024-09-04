@@ -144,6 +144,40 @@ public class TestTetris2 {
         assertArrayEquals(formaActual, formaEsperada);
     }
 
+    @Test
+    public void girar_piezaT_derecha(){
+        PieceT pieceT = new PieceT();
+
+        pieceT.rotateDer();
+
+        int[][] formaEsperada = {
+            {1, 0, 0},
+            {1, 1, 0},
+            {1, 0, 0}
+        };
+
+        int [][] formaActual = pieceT.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
+    @Test
+    public void girar_piezaT_izquierda(){
+        PieceT pieceT = new PieceT();
+
+        pieceT.rotateIzq();
+
+        int[][] formaEsperada = {
+            {0, 0, 1},
+            {0, 1, 1},
+            {0, 0, 1}
+        };
+
+        int [][] formaActual = pieceT.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
 
 
     //{0, 0, 0},
