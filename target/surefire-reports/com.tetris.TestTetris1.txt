@@ -1,15 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tetris.TestTetris1
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.081 s <<< FAILURE! - in com.tetris.TestTetris1
-la_piece_Dog_tiene_la_forma_correcta(com.tetris.TestTetris1)  Time elapsed: 0.012 s  <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problems: 
-	Syntax error on token(s), misplaced construct(s)
-	The method PieceDog(int[][]::piece) is undefined for the type PieceDog
-	Syntax error on token "]", :: expected after this token
-	Syntax error, insert ";" to complete Statement
-	Constructor call must be the first statement in a constructor
-
-	at com.tetris.TestTetris1.la_piece_Dog_tiene_la_forma_correcta(TestTetris1.java:51)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s - in com.tetris.TestTetris1

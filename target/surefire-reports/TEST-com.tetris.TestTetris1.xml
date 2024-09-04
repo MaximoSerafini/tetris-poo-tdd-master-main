@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tetris.TestTetris1" time="0.081" tests="5" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tetris.TestTetris1" time="0.061" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="AR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin"/>
-    <property name="sun.java.command" value="C:\Users\Serra\AppData\Local\Temp\surefire11393804957539736746\surefirebooter15185657918668667028.jar C:\Users\Serra\AppData\Local\Temp\surefire11393804957539736746 2024-09-04T17-19-05_354-jvmRun1 surefire11090852181509136147tmp surefire_04068414058135744122tmp"/>
+    <property name="sun.java.command" value="C:\Users\Serra\AppData\Local\Temp\surefire10083263504989817978\surefirebooter17521282850360060837.jar C:\Users\Serra\AppData\Local\Temp\surefire10083263504989817978 2024-09-04T19-43-32_191-jvmRun1 surefire1538125411073721396tmp surefire_01880574865722256888tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.tetris.TestTetris1"/>
     <property name="surefire.test.class.path" value="C:\Users\Serra\OneDrive\Escritorio\Jupyter Notebooks\final-tetris\tetris-poo-tdd-master-main\target\test-classes;C:\Users\Serra\OneDrive\Escritorio\Jupyter Notebooks\final-tetris\tetris-poo-tdd-master-main\target\classes;C:\Users\Serra\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Serra\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Serra\AppData\Local\Temp\surefire11393804957539736746\surefirebooter15185657918668667028.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Serra\AppData\Local\Temp\surefire10083263504989817978\surefirebooter17521282850360060837.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.1+9-29"/>
@@ -60,20 +60,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="64.0"/>
   </properties>
-  <testcase name="la_piece_L_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.006"/>
-  <testcase name="la_piece_esta_ahi" classname="com.tetris.TestTetris1" time="0"/>
-  <testcase name="test_pieza_stick" classname="com.tetris.TestTetris1" time="0"/>
-  <testcase name="la_pieza_existe" classname="com.tetris.TestTetris1" time="0"/>
-  <testcase name="la_piece_Dog_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.012">
-    <error message="Unresolved compilation problems: &#10;	Syntax error on token(s), misplaced construct(s)&#10;	The method PieceDog(int[][]::piece) is undefined for the type PieceDog&#10;	Syntax error on token &quot;]&quot;, :: expected after this token&#10;	Syntax error, insert &quot;;&quot; to complete Statement&#10;	Constructor call must be the first statement in a constructor&#10;" type="java.lang.Error">java.lang.Error: 
-Unresolved compilation problems: 
-	Syntax error on token(s), misplaced construct(s)
-	The method PieceDog(int[][]::piece) is undefined for the type PieceDog
-	Syntax error on token "]", :: expected after this token
-	Syntax error, insert ";" to complete Statement
-	Constructor call must be the first statement in a constructor
-
-	at com.tetris.TestTetris1.la_piece_Dog_tiene_la_forma_correcta(TestTetris1.java:51)
-</error>
-  </testcase>
+  <testcase name="la_piece_t_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.006"/>
+  <testcase name="la_piece_LRight_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0"/>
+  <testcase name="la_piece_DogRight_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.002"/>
+  <testcase name="testBoard" classname="com.tetris.TestTetris1" time="0"/>
+  <testcase name="la_piece_Stick_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0"/>
+  <testcase name="la_piece_LLeft_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.001"/>
+  <testcase name="la_piece_square_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.001"/>
+  <testcase name="la_piece_DogLeft_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.002"/>
 </testsuite>
