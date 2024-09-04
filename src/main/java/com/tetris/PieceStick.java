@@ -1,10 +1,12 @@
 package com.tetris;
 
 public class PieceStick extends Piece{
-    int[][] Stick = {
-        {1},
-        {1},
-        {1},
-        {1}
-    };
+    public PieceStick() {
+        super(new int[][] {
+            {1, 0, 0, 0},
+            {1, 0, 0, 0},
+            {1, 0, 0, 0},
+            {1, 0, 0, 0}
+        });
+    }
 }
