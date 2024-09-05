@@ -16,26 +16,31 @@ Requerimiento 3:
 public class Board {
 
     private final int ancho = 10;
-    private final int alto = 20;
+    private final int alto = 10;
     private final int[][] grid = new int[ancho][alto];
-    private Piece currentPiece;
+    private Piece PieceActual;
     private final Random random = new Random();
 
     public void addPieceBoard(Piece piece) { 
         int xPos = random.nextInt(ancho - piece.getShape()[0].length);
-        currentPiece = piece;
-        placePiece(currentPiece, xPos, 0); //dentro del tablero
+        PieceActual = piece;
+        placePiece(PieceActual, xPos, 0); //dentro del tablero
     }
 
     private void placePiece(Piece piece, int x, int y) {
-        this.currentPiece = piece;
-        this.currentPiece.x = x;
-        this.currentPiece.y = y;
+        this.PieceActual = piece;
+        this.PieceActual.x = x;
+        this.PieceActual.y = y;
     }
 
     public boolean moveDown() {
-        // verificar
-        return true; //verico que pueda bajar!
+
+        int currentY = PieceActual.getY(); //cords
+
+        PieceActual.setY(currentY + 1); //muevo 1 abajo y seteo
+        
+        return true; 
     }
+    
 
 }
