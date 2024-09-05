@@ -178,10 +178,75 @@ public class TestTetris2 {
         assertArrayEquals(formaEsperada, formaActual);
     }
 
+    @Test
+    public void girar_piezalLeft_derecha(){
+        PieceLLeft piecelLeft = new PieceLLeft();
+
+        piecelLeft.rotateDer();
+
+        int[][] formaEsperada = {
+            {1, 0, 0},
+            {1, 1, 1},
+            {0, 0, 0}
+        };
+
+        int [][] formaActual = piecelLeft.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
+    @Test
+    public void girar_piezalLeft_izquierda(){
+        PieceLLeft piecelLeft = new PieceLLeft();
+
+        piecelLeft.rotateIzq();
+
+        int[][] formaEsperada = {
+            {0, 0, 0},
+            {1, 1, 1},
+            {0, 0, 1}
+        };
+
+        int [][] formaActual = piecelLeft.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
+    @Test
+    public void girar_piezalDer_derecha(){
+        PieceLRight pieceLRight = new PieceLRight();
+
+        pieceLRight.rotateDer();
+
+        int[][] formaEsperada = {
+            {0, 0, 0},
+            {1, 1, 1},
+            {1, 0, 0}
+        };
+
+        int [][] formaActual = pieceLRight.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
+
+    @Test
+    public void girar_piezalDer_izq(){
+        PieceLRight pieceLRight = new PieceLRight();
+
+        pieceLRight.rotateIzq();
+
+        int[][] formaEsperada = {
+            {0, 0, 1},
+            {1, 1, 1},
+            {0, 0, 0}
+        };
+
+        int [][] formaActual = pieceLRight.getShape();
+
+        assertArrayEquals(formaEsperada, formaActual);
+    }
 
 
-    //{0, 0, 0},
-    //{0, 1, 1},
-    //{1, 1, 0}
+
 
 }
