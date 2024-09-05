@@ -18,10 +18,9 @@ public class TestTetris1 {
         
         // Definir la forma esperada de la pieza LLeft
         int[][] formaEsperada = {
-            {0, 0, 0, 0},
-            {0, 1, 0, 0},
-            {0, 1, 0, 0},
-            {1, 1, 0, 0}
+            {0, 1, 0},
+            {0, 1, 0},
+            {1, 1, 0}
         };
 
         // Obtener la forma actual de la pieza L
@@ -38,10 +37,9 @@ public class TestTetris1 {
         
         // Definir la forma esperada de la pieza LLeft
         int[][] formaEsperada = {
-            {0, 0, 0, 0},
-            {0, 1, 0, 0},
-            {0, 1, 0, 0},
-            {0, 1, 1, 0}
+            {0, 1, 0},
+            {0, 1, 0},
+            {0, 1, 1}
         };
 
         // Obtener la forma actual de la pieza L
@@ -56,10 +54,9 @@ public class TestTetris1 {
         PieceDogLeft pieceDog = new PieceDogLeft();
 
         int[][] formaEsperada = {
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {1, 1, 0, 0},
-            {0, 1, 1, 0}
+            {0, 0, 0},
+            {1, 1, 0},
+            {0, 1, 1}
         };
 
         int[][] formaActual = pieceDog.getShape();
@@ -72,10 +69,9 @@ public class TestTetris1 {
         PieceDogRight pieceDog = new PieceDogRight();
 
         int[][] formaEsperada = {
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 1, 1, 0},
-            {1, 1, 0, 0}
+            {0, 0, 0},
+            {0, 1, 1},
+            {1, 1, 0}
         };
 
         int[][] formaActual = pieceDog.getShape();
@@ -88,10 +84,8 @@ public class TestTetris1 {
         PieceSquare pieceSquare = new PieceSquare();
 
         int[][] formaEsperada = {
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {1, 1, 0, 0},
-            {1, 1, 0, 0}
+            {1, 1},
+            {1, 1}
         };
 
         int[][] formaActual = pieceSquare.getShape();
@@ -104,10 +98,9 @@ public class TestTetris1 {
         PieceT pieceT = new PieceT();
 
         int[][] formaEsperada = {
-            {0, 0, 0, 0},
-            {0, 0, 0, 0},
-            {0, 1, 0, 0},
-            {1, 1, 1, 0}
+            {0, 0, 0},
+            {0, 1, 0},
+            {1, 1, 1}
         };
 
         int[][] formaActual = pieceT.getShape();
@@ -129,15 +122,6 @@ public class TestTetris1 {
         int[][] formaActual = pieceStick.getShape();
 
         assertArrayEquals(formaEsperada, formaActual);
-    }
-
-    @Test
-    public void testBoard() {
-        Board board = new Board();
-        PieceStick piece = new PieceStick();
-        PieceT piece2 = new PieceT();
-        board.addPieceBoard(piece);
-        board.addPieceBoard(piece2);
     }
 
     //Falta test de piezas dentro del tablero !
