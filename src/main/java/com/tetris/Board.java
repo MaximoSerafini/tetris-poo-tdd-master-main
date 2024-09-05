@@ -33,12 +33,12 @@ public class Board {
         this.PieceActual.y = y;
     }
 
-    public boolean moveDown() {
+    public boolean moveDown(PieceStick piece) {
 
         int currentY = PieceActual.getY(); //cords
 
         PieceActual.setY(currentY + 1); //muevo 1 abajo y seteo
-        
+
         return true; 
     }
     
