@@ -1,15 +1,11 @@
 package com.tetris;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import static org.junit.Assert.assertArrayEquals;
->>>>>>> a0fc15eb4f3de2dae463e9313fe1c9ab40ff57ad
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 //import static org.junit.Assert.assertEquals;
->>>>>>> cce41bcc7ec7e18f0488c574a48d042af9f9351d
+
 import org.junit.Test;
 
 public class TestTetris3 {
