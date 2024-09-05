@@ -28,8 +28,8 @@ public class Board {
         int[][] shape = piece.getPiece();
         int pieceWidth = shape[0].length;
         int pieceHeight = shape.length;
-
-        // Verifica los límites en coordenadas x e y
+    
+        // Verifica que la pieza no salga por los lados ni por abajo del tablero
         if (piece.getX() < 0 || piece.getX() + pieceWidth > ancho ||
             piece.getY() < 0 || piece.getY() + pieceHeight > alto) {
             return false;
@@ -39,16 +39,19 @@ public class Board {
 
     // Mueve la pieza hacia abajo, si está dentro de los límites del tablero
     public boolean moveDown() {
-        int currentY = PieceActual.getY(); // Coordenada actual 'y'
-
-        PieceActual.moveDown(); // Mueve la pieza hacia abajo
-
-        // Verifica si la pieza sigue dentro de los límites después del movimiento
-        if (!LimitesVeri(PieceActual)) {
-            PieceActual.setY(currentY); // Si se sale, vuelve a la posición anterior
-            return false; // El movimiento no fue posible
+        if (PieceActual == null) {
+            return false;
         }
-
+    
+        int currentY = PieceActual.getY(); // Obtiene la coordenada actual 'y'
+        PieceActual.setY(currentY + 1);    // Mueve la pieza hacia abajo
+    
+        // Verifica si la nueva posición está dentro de los límites usando LimitesVeri
+        if (!LimitesVeri(PieceActual)) {
+            PieceActual.setY(currentY);    // Si está fuera de los límites, deshace el movimiento
+            return false;                
+        }
+    
         return true; // Movimiento válido
     }
 }
