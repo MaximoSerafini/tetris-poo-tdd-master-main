@@ -23,6 +23,9 @@ public class Board {
         this.PieceActual.setY(y);
     }
 
+<<<<<<< HEAD
+    public boolean moveDown(PieceStick piece) {
+=======
     // Método que verifica si la pieza está dentro de los límites del tablero
     public boolean LimitesVeri(Piece piece) {
         int[][] shape = piece.getPiece();
@@ -39,8 +42,25 @@ public class Board {
 
     // Mueve la pieza hacia abajo, si está dentro de los límites del tablero
     public boolean moveDown() {
+<<<<<<< HEAD
         if (PieceActual == null) {
             return false;
+=======
+        int currentY = PieceActual.getY(); // Coordenada actual 'y'
+>>>>>>> cce41bcc7ec7e18f0488c574a48d042af9f9351d
+
+        PieceActual.moveDown(); // Mueve la pieza hacia abajo
+
+<<<<<<< HEAD
+        PieceActual.setY(currentY + 1); //muevo 1 abajo y seteo
+
+        return true; 
+=======
+        // Verifica si la pieza sigue dentro de los límites después del movimiento
+        if (!LimitesVeri(PieceActual)) {
+            PieceActual.setY(currentY); // Si se sale, vuelve a la posición anterior
+            return false; // El movimiento no fue posible
+>>>>>>> a0fc15eb4f3de2dae463e9313fe1c9ab40ff57ad
         }
     
         int currentY = PieceActual.getY(); // Obtiene la coordenada actual 'y'
@@ -53,5 +73,6 @@ public class Board {
         }
     
         return true; // Movimiento válido
+>>>>>>> cce41bcc7ec7e18f0488c574a48d042af9f9351d
     }
 }
