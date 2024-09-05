@@ -1,6 +1,7 @@
 package com.tetris;
+
 //test
-public class Piece {
+public class Piece{
     
     public int[][] piece;
     public int x;
@@ -70,6 +71,11 @@ public class Piece {
         
         this.piece = rotatedPiece;
     }
+
+    public void moveDown() {
+        this.y += 1;  // Solo mueve la pieza hacia abajo
+    }
+    
 }
 
 
