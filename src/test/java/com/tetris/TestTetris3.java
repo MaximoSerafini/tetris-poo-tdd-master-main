@@ -1,12 +1,11 @@
 package com.tetris;
-<<<<<<< HEAD
-=======
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Timer;
+
 //import static org.junit.Assert.assertEquals;
->>>>>>> cce41bcc7ec7e18f0488c574a48d042af9f9351d
 import org.junit.Test;
 
 public class TestTetris3 {
@@ -32,4 +31,16 @@ public class TestTetris3 {
         // Verifica que la pieza está dentro de los límites del tablero
         assertTrue(board.LimitesVeri(piece));
     }
+
+    //@Test
+    //public void testClock() {
+    //
+    //    PieceStick pieceStick = new PieceStick();
+    //
+    //    int inicioY = pieceStick.getY();
+    //    int moveY = pieceStick.getY();
+    //    
+    //    assertEquals(inicioY + 2, moveY);
+    //}
+    
 }
