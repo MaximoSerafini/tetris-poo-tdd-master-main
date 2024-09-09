@@ -23,8 +23,8 @@ public class Board {
         this.pieceActual.setY(y);
     }
 
-    // Método que verifica si la pieza está dentro de los límites del tablero
-    public boolean LimitesVeri(Piece piece) {
+    // Método que verifica si la pieza está dentro de los límites del tablero y considera las colisiones 
+    public boolean LimitesVeri(Piece piece) {  // EL GOAT
         int[][] shape = piece.getPiece();
         int pieceWidth = shape[0].length;
         int pieceHeight = shape.length;
@@ -46,7 +46,7 @@ public class Board {
             }
         }
 
-        return true;
+        return true;    
     }
 
     // Mueve la pieza hacia abajo, si está dentro de los límites del tablero

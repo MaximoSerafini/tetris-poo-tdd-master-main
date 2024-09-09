@@ -1,5 +1,5 @@
 package com.tetris;
-import static org.junit.Assert.assertArrayEquals;
+//import static org.junit.Assert.assertArrayEquals;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -78,4 +78,49 @@ public class TestTetris3 {
         assertEquals(2, piece.getY());        
         assertTrue(board.LimitesVeri(piece)); // Verifica que sigue dentro de los límites del tablero después del segundo movimiento
     }
+
+    @Test
+    public void test_Dos_Pieces_bajan_una_vez() {
+        Board board = new Board();          
+        PieceDogRight piece = new PieceDogRight();  
+        PieceDogLeft piecelef = new PieceDogLeft();
+
+        board.addPieceBoard(piece);         
+        board.addPieceBoard(piecelef);
+        
+        piece.moveDown();                  
+        assertEquals(1, piece.getY());       
+        assertTrue(board.LimitesVeri(piece)); 
+
+        piecelef.moveDown();                  
+        assertEquals(1, piecelef.getY());       
+        assertTrue(board.LimitesVeri(piecelef)); 
+    }
+
+    @Test
+    public void test_Dos_Pieces_bajan_dos_veces() {
+        Board board = new Board();          
+        PieceDogRight piece = new PieceDogRight();  
+        PieceDogLeft piecelef = new PieceDogLeft();
+
+        board.addPieceBoard(piece);         
+        board.addPieceBoard(piecelef);
+        
+        piece.moveDown();                  
+        assertEquals(1, piece.getY());       
+        assertTrue(board.LimitesVeri(piece)); 
+
+        piecelef.moveDown();                  
+        assertEquals(1, piecelef.getY());       
+        assertTrue(board.LimitesVeri(piecelef)); 
+
+        piece.moveDown();                  
+        assertEquals(2, piece.getY());       
+        assertTrue(board.LimitesVeri(piece)); 
+
+        piecelef.moveDown();                  
+        assertEquals(2, piecelef.getY());       
+        assertTrue(board.LimitesVeri(piecelef)); 
+    }
+
 }
