@@ -1,19 +1,30 @@
 package com.tetris;
+import java.util.Timer;
+import java.util.TimerTask;
 
 //test
 public class Piece{
     
     public int[][] piece;
     public int x;
-    public int y; 
+    public int y;
+    private ClockDemo clock;
+    private Timer timer;
     public int[][] shape;
     
     
     public Piece() {
+        //----> falta probar
+        //this.timer = new Timer();
+        //this.clock = new ClockDemo();
+        //startTimer();
     }
 
     public Piece(int[][] piece){
-        this.piece = piece; 
+        this.piece = piece;
+        this.timer = new Timer();
+        this.clock = new ClockDemo();
+        startTimer();
     }
 
     public void setPiece(int [][] piece){
@@ -45,7 +56,7 @@ public class Piece{
         return y; 
     }
 
-    //Método para rotar la pieza en sentido horario
+    //rotacion sentido horario
     public void rotateIzq() {
         int n = piece.length;
         int[][] rotatedPiece = new int[n][n];
@@ -73,8 +84,23 @@ public class Piece{
     }
 
     public void moveDown() {
-        this.y += 1;  // Solo mueve la pieza hacia abajo
+        this.y += 1;  //pieza 1 pos abajo
     }
+
+    private void startTimer() {
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                clock.tic();  // +1 seg
+                moveDown();   // pieza 1 pos abajo
+            }
+        }, 0, 1000);  // periodo de 1seg
+    }
+
+    //stop para el timer una vez que finaliza
+    //public void stopTimer() {
+    //    timer.cancel();
+    //}
     
 }
 

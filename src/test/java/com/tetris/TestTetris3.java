@@ -1,11 +1,6 @@
 package com.tetris;
-//import static org.junit.Assert.assertArrayEquals;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-//import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 public class TestTetris3 {
@@ -32,6 +27,18 @@ public class TestTetris3 {
         assertTrue(board.LimitesVeri(piece));
     }
 
+
+    //@Test
+    //public void testClock() {
+    //
+    //    PieceStick pieceStick = new PieceStick();
+    //
+    //    int inicioY = pieceStick.getY();
+    //    int moveY = pieceStick.getY();
+    //    
+    //    assertEquals(inicioY + 2, moveY);
+    //}
+    
     @Test
     public void testPieceDog_Baja_dos_veces() {
         Board board = new Board();
