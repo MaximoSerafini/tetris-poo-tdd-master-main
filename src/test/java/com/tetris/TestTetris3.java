@@ -144,7 +144,7 @@ public class TestTetris3 {
     @Test
     public void diez_sticks_bajando() {
         Board board = new Board();
-        PieceStick piece1 = new PieceStick();  
+        PieceDogLeft piece1 = new PieceDogLeft();  
         PieceStick piece2 = new PieceStick();  
         PieceStick piece3 = new PieceStick();  
         PieceStick piece4 = new PieceStick();  
