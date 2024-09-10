@@ -28,16 +28,29 @@ public class TestTetris3 {
     }
 
 
-    //@Test
-    //public void testClock() {
-    //
-    //    PieceStick pieceStick = new PieceStick();
-    //
-    //    int inicioY = pieceStick.getY();
-    //    int moveY = pieceStick.getY();
-    //    
-    //    assertEquals(inicioY + 2, moveY);
-    //}
+    @Test
+    public void testClock() {
+        Board board = new Board();
+        PieceStick pieceStick = new PieceStick();
+        board.addPieceBoard(pieceStick);
+
+        int initialY = pieceStick.getY();
+
+        pieceStick.startTimer();
+
+        try {
+            // Espera 1 segundo para permitir solo un descenso
+            Thread.sleep(1000); // Ajusta el valor si es necesario
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Detén el temporizador después de permitir 1-2 movimientos
+        pieceStick.stopTimer(); // Debes asegurarte de implementar este método
+
+        // Verifica que la pieza solo haya descendido una o dos posiciones
+        assertEquals(initialY + 2, pieceStick.getY()); // Ajusta según la lógica
+    }
     
     @Test
     public void testPieceDog_Baja_dos_veces() {
@@ -129,5 +142,40 @@ public class TestTetris3 {
         assertEquals(2, piecelef.getY());       
         assertTrue(board.LimitesVeri(piecelef)); 
     }
+
+    @Test
+    public void diez_sticks_bajando() {
+        Board board = new Board();
+        PieceStick piece1 = new PieceStick();  
+        PieceStick piece2 = new PieceStick();  
+        PieceStick piece3 = new PieceStick();  
+        PieceStick piece4 = new PieceStick();  
+        PieceStick piece5 = new PieceStick();  
+        PieceStick piece6 = new PieceStick();  
+        PieceStick piece7 = new PieceStick();  
+        PieceStick piece8 = new PieceStick();  
+        PieceStick piece9 = new PieceStick();  
+        PieceStick piece10 = new PieceStick(); 
+        
+        board.addPieceBoard(piece1); 
+        board.addPieceBoard(piece2); 
+        board.addPieceBoard(piece3); 
+        board.addPieceBoard(piece4); 
+        board.addPieceBoard(piece5); 
+        board.addPieceBoard(piece6); 
+        board.addPieceBoard(piece7); 
+        board.addPieceBoard(piece8); 
+        board.addPieceBoard(piece9); 
+        board.addPieceBoard(piece10); 
+
+        piece1.moveDown();                  
+        assertEquals(1, piece1.getY());       
+        assertTrue(board.LimitesVeri(piece1)); 
+
+        piece10.moveDown();                  
+        assertEquals(1, piece10.getY());       
+        assertTrue(board.LimitesVeri(piece10)); 
+    }
+    
 
 }

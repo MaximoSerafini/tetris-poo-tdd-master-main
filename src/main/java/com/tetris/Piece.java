@@ -87,7 +87,7 @@ public class Piece{
         this.y += 1;  //pieza 1 pos abajo
     }
 
-    private void startTimer() {
+    public void startTimer() {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -97,10 +97,12 @@ public class Piece{
         }, 0, 1000);  // periodo de 1seg
     }
 
+   
+
     //stop para el timer una vez que finaliza
-    //public void stopTimer() {
-    //    timer.cancel();
-    //}
+    public void stopTimer() {
+        timer.cancel();
+    }
     
 }
 
