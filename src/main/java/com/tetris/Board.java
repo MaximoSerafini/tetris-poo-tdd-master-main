@@ -43,7 +43,7 @@ public class Board {
         }
     
         return true;    
-    }
+    } 
 
     // Mueve la pieza hacia abajo, si está dentro de los límites del tablero
     public boolean moveDown() {

@@ -142,7 +142,7 @@ public class TestTetris3 {
     }
 
     @Test
-    public void diez_sticks_bajando() {
+    public void diez_sticks_bajando() { // Esta bien que de error
         Board board = new Board();
         PieceDogLeft piece1 = new PieceDogLeft();  
         PieceStick piece2 = new PieceStick();  
