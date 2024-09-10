@@ -87,6 +87,14 @@ public class Piece{
         this.y += 1;  //pieza 1 pos abajo
     }
 
+    public void moveRight() {
+        this.x += 1;  //pieza 1 pos abajo
+    }
+
+    public void moveLeft() {
+        this.x -= 1;  //pieza 1 pos abajo
+    }
+
     public void startTimer() {
         timer.schedule(new TimerTask() {
             @Override

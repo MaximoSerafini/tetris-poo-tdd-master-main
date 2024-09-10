@@ -45,18 +45,58 @@ public class Board {
         return true;    
     } 
 
-    // Mueve la pieza hacia abajo, si está dentro de los límites del tablero
     public boolean moveDown() {
         if (pieceActual == null) {
             return false;
         }
     
         int currentY = pieceActual.getY(); // Coordenada actual 'y'
-        pieceActual.setY(currentY + 1); // Mueve la pieza hacia abajo
+    
+        // Intenta mover la pieza hacia abajo
+        pieceActual.setY(currentY + 1);
     
         // Verifica si la pieza sigue dentro de los límites después del movimiento
         if (!LimitesVeri(pieceActual)) {
-            pieceActual.setY(currentY); // Si se sale, vuelve a la posición anterior
+            // Si se sale del límite, mueve la pieza una fila hacia arriba
+            pieceActual.setY(currentY);
+            return false; // El movimiento no fue posible
+        }
+    
+        // Actualiza el tablero con la nueva posición de la pieza
+        updateBoard();
+        return true; // Movimiento válido
+    }
+
+    public boolean moveRight() {
+        if (pieceActual == null) {
+            return false;
+        }
+    
+        int currentX = pieceActual.getX(); // Coordenada actual 'y'
+        pieceActual.setX(currentX + 1); // Mueve la pieza hacia abajo
+    
+        // Verifica si la pieza sigue dentro de los límites después del movimiento
+        if (!LimitesVeri(pieceActual)) {
+            pieceActual.setY(currentX); // Si se sale, vuelve a la posición anterior
+            return false; // El movimiento no fue posible
+        }
+    
+        // Actualiza el tablero con la nueva posición de la pieza
+        updateBoard();
+        return true; // Movimiento válido
+    }
+
+    public boolean moveLeft() {
+        if (pieceActual == null) {
+            return false;
+        }
+    
+        int currentX = pieceActual.getX(); // Coordenada actual 'y'
+        pieceActual.setX(currentX - 1); // Mueve la pieza hacia abajo
+    
+        // Verifica si la pieza sigue dentro de los límites después del movimiento
+        if (!LimitesVeri(pieceActual)) {
+            pieceActual.setY(currentX); // Si se sale, vuelve a la posición anterior
             return false; // El movimiento no fue posible
         }
     
