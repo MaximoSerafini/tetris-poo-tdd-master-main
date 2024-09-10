@@ -27,7 +27,6 @@ public class TestTetris3 {
         assertTrue(board.LimitesVeri(piece));
     }
 
-
     @Test
     public void testClock() {
         Board board = new Board();
@@ -40,9 +39,8 @@ public class TestTetris3 {
 
         try {
             // Espera 1 segundo para permitir solo un descenso
-            Thread.sleep(1000); // Ajusta el valor si es necesario
+            Thread.sleep(500); // Ajusta el valor si es necesario
         } catch (InterruptedException e) {
-            e.printStackTrace();
         }
 
         // Detén el temporizador después de permitir 1-2 movimientos
@@ -171,11 +169,35 @@ public class TestTetris3 {
         piece1.moveDown();                  
         assertEquals(1, piece1.getY());       
         assertTrue(board.LimitesVeri(piece1)); 
-
+        piece2.moveDown();                  
+        assertEquals(1, piece2.getY());       
+        assertTrue(board.LimitesVeri(piece2)); 
+        piece3.moveDown();                  
+        assertEquals(1, piece3.getY());       
+        assertTrue(board.LimitesVeri(piece3)); 
+        piece4.moveDown();                  
+        assertEquals(1, piece4.getY());       
+        assertTrue(board.LimitesVeri(piece4)); 
+        piece5.moveDown();                  
+        assertEquals(1, piece5.getY());       
+        assertTrue(board.LimitesVeri(piece5)); 
+        piece6.moveDown();                  
+        assertEquals(1, piece6.getY());       
+        assertTrue(board.LimitesVeri(piece6)); 
+        piece7.moveDown();                  
+        assertEquals(1, piece7.getY());       
+        assertTrue(board.LimitesVeri(piece7)); 
+        piece8.moveDown();                  
+        assertEquals(1, piece8.getY());       
+        assertTrue(board.LimitesVeri(piece8)); 
+        piece9.moveDown();                  
+        assertEquals(1, piece9.getY());       
+        assertTrue(board.LimitesVeri(piece9)); 
         piece10.moveDown();                  
         assertEquals(1, piece10.getY());       
         assertTrue(board.LimitesVeri(piece10)); 
     }
-    
+
+
 
 }

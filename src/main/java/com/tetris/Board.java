@@ -8,6 +8,8 @@ public class Board {
     private final int[][] grid = new int[alto][ancho]; // La matriz debe ser alto x ancho
     private Piece pieceActual;
     private final Random random = new Random();
+    Random aleatorio = new Random(System.currentTimeMillis());
+    int intAletorio = aleatorio.nextInt(11);
 
     // Agrega la pieza al tablero de manera aleatoria en el primer renglón
     public void addPieceBoard(Piece piece) {
