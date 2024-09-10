@@ -39,14 +39,13 @@ public class TestTetris3 {
         pieceStick.startTimer();
 
         try {
-            // Espera 1 segundo para permitir solo un descenso
-            Thread.sleep(1000); // Ajusta el valor si es necesario
+            
+            Thread.sleep(500); 
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            
         }
 
-        // Detén el temporizador después de permitir 1-2 movimientos
-        pieceStick.stopTimer(); // Debes asegurarte de implementar este método
+        pieceStick.stopTimer();
 
         // Verifica que la pieza solo haya descendido una o dos posiciones
         assertEquals(initialY + 2, pieceStick.getY()); // Ajusta según la lógica

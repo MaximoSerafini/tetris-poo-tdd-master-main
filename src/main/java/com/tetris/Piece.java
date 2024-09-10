@@ -97,8 +97,6 @@ public class Piece{
         }, 0, 1000);  // periodo de 1seg
     }
 
-   
-
     //stop para el timer una vez que finaliza
     public void stopTimer() {
         timer.cancel();
