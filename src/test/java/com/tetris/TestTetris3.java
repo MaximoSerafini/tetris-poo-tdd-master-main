@@ -27,7 +27,6 @@ public class TestTetris3 {
         assertTrue(board.LimitesVeri(piece));
     }
 
-
     @Test
     public void testClock() {
         Board board = new Board();
@@ -39,8 +38,8 @@ public class TestTetris3 {
         pieceStick.startTimer();
 
         try {
-            
-            Thread.sleep(500); 
+            // Espera 1 segundo para permitir solo un descenso
+            Thread.sleep(500); // Ajusta el valor si es necesario
         } catch (InterruptedException e) {
             
         }
@@ -145,7 +144,7 @@ public class TestTetris3 {
     @Test
     public void diez_sticks_bajando() {
         Board board = new Board();
-        PieceStick piece1 = new PieceStick();  
+        PieceDogLeft piece1 = new PieceDogLeft();  
         PieceStick piece2 = new PieceStick();  
         PieceStick piece3 = new PieceStick();  
         PieceStick piece4 = new PieceStick();  
@@ -170,11 +169,50 @@ public class TestTetris3 {
         piece1.moveDown();                  
         assertEquals(1, piece1.getY());       
         assertTrue(board.LimitesVeri(piece1)); 
-
+        piece2.moveDown();                  
+        assertEquals(1, piece2.getY());       
+        assertTrue(board.LimitesVeri(piece2)); 
+        piece3.moveDown();                  
+        assertEquals(1, piece3.getY());       
+        assertTrue(board.LimitesVeri(piece3)); 
+        piece4.moveDown();                  
+        assertEquals(1, piece4.getY());       
+        assertTrue(board.LimitesVeri(piece4)); 
+        piece5.moveDown();                  
+        assertEquals(1, piece5.getY());       
+        assertTrue(board.LimitesVeri(piece5)); 
+        piece6.moveDown();                  
+        assertEquals(1, piece6.getY());       
+        assertTrue(board.LimitesVeri(piece6)); 
+        piece7.moveDown();                  
+        assertEquals(1, piece7.getY());       
+        assertTrue(board.LimitesVeri(piece7)); 
+        piece8.moveDown();                  
+        assertEquals(1, piece8.getY());       
+        assertTrue(board.LimitesVeri(piece8)); 
+        piece9.moveDown();                  
+        assertEquals(1, piece9.getY());       
+        assertTrue(board.LimitesVeri(piece9)); 
         piece10.moveDown();                  
         assertEquals(1, piece10.getY());       
         assertTrue(board.LimitesVeri(piece10)); 
     }
+
+
+    @Test
+    public void testLines() {
+        
+        Board board = new Board();
+        PieceStick piece1 = new PieceStick();
+        board.addPieceBoard(piece1);
+        piece1.moveDown(); //???
     
+        // deberia de incluir chequear el final del juego
+        board.updateBoard();
+    
+    }
+    
+
+
 
 }
