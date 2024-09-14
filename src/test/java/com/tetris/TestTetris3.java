@@ -142,7 +142,7 @@ public class TestTetris3 {
     }
 
     @Test
-    public void diez_sticks_bajando() {
+    public void diez_sticks_bajando() { // Esta bien que de error
         Board board = new Board();
         PieceDogLeft piece1 = new PieceDogLeft();  
         PieceStick piece2 = new PieceStick();  
@@ -196,6 +196,53 @@ public class TestTetris3 {
         piece10.moveDown();                  
         assertEquals(1, piece10.getY());       
         assertTrue(board.LimitesVeri(piece10)); 
+    }
+
+    @Test
+    public void testPieceDog_se_mueve_a_la_derecha() {
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        board.addPieceBoard(piece); 
+
+        piece.moveRight(); 
+
+        assertEquals(1, piece.getX()); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void testPieceDog_se_mueve_a_la_izquierda() { // no anda por que pasa el limite, esta bien
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        board.addPieceBoard(piece); 
+
+        piece.moveLeft(); 
+
+        assertEquals(-1, piece.getX()); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void testPieceDog_se_mueve_a_la_derecha_dos_veces_y_va_a_la_izquierda() { // no anda por que pasa el limite, esta bien
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        board.addPieceBoard(piece); 
+
+        piece.moveRight(); 
+
+        assertEquals(1, piece.getX()); 
+
+        piece.moveRight(); 
+
+        assertEquals(2, piece.getX()); 
+
+        piece.moveLeft(); 
+
+        assertEquals(1, piece.getX()); 
+
+        assertTrue(board.LimitesVeri(piece));
     }
 
 
