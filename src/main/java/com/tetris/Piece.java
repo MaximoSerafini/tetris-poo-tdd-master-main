@@ -88,11 +88,11 @@ public class Piece{
     }
 
     public void moveRight() {
-        this.x += 1;  //pieza 1 pos abajo
+        this.x += 1;  
     }
 
     public void moveLeft() {
-        this.x -= 1;  //pieza 1 pos abajo
+        this.x -= 1;  
     }
 
     public void startTimer() {

@@ -49,6 +49,28 @@ public class TestTetris3 {
         // Verifica que la pieza solo haya descendido una o dos posiciones
         assertEquals(initialY + 2, pieceStick.getY()); // Ajusta según la lógica
     }
+
+    @Test
+    public void test_clock_pieceSquare(){
+        Board board = new Board();
+        PieceSquare pieceSquar = new PieceSquare();
+        board.addPieceBoard(pieceSquar);
+
+
+        pieceSquar.startTimer();
+        try {
+            // Espera 1 segundo para permitir solo un descenso
+            Thread.sleep(500); // Ajusta el valor si es necesario
+        } catch (InterruptedException e) {
+            
+        }
+
+        pieceSquar.stopTimer();
+
+        // Verifica que la pieza solo haya descendido una o dos posiciones
+        assertEquals(2, pieceSquar.getY()); // Ajusta según la lógica
+
+    }
     
     @Test
     public void testPieceDog_Baja_dos_veces() {
@@ -98,17 +120,11 @@ public class TestTetris3 {
     }
 
     @Test
-    public void test_Dos_Pieces_bajan_una_vez() {
+    public void testPieceDogLeft_baja_dos_vece() {
         Board board = new Board();          
-        PieceDogRight piece = new PieceDogRight();  
         PieceDogLeft piecelef = new PieceDogLeft();
-
-        board.addPieceBoard(piece);         
-        board.addPieceBoard(piecelef);
-        
-        piece.moveDown();                  
-        assertEquals(1, piece.getY());       
-        assertTrue(board.LimitesVeri(piece)); 
+    
+        board.addPieceBoard(piecelef);    
 
         piecelef.moveDown();                  
         assertEquals(1, piecelef.getY());       
