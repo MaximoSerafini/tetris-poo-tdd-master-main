@@ -5,7 +5,7 @@ public class Board {
 
     private final int ancho = 10;
     private final int alto = 20; // Cambié a 20 para cumplir con el requerimiento de 10x20
-    private final int[][] grid = new int[alto][ancho]; // La matriz debe ser alto x ancho
+    public final int[][] grid = new int[alto][ancho]; // La matriz debe ser alto x ancho
     private Piece pieceActual;
     private final Random random = new Random();
     private int totalCleared = 0;
