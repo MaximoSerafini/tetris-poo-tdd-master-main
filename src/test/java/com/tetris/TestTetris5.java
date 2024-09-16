@@ -1,4 +1,6 @@
 package com.tetris;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class TestTetris5 {
@@ -18,8 +20,17 @@ public class TestTetris5 {
     }
 
     @Test
-    public void testIsLineCompleteTrue() {
-        
+    public void testLineCompleteTrue() {
+        Board board = new Board();
+        int[] fila = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};  // Línea completa
+        assertTrue(board.isLineComplete(fila));
+    }
+
+    @Test
+    public void testLineCompleteFalse() {
+        Board board = new Board();
+        int[] fila = {0, 1, 1, 1, 0, 0, 1, 1, 0, 1};  // Línea completa
+        assertFalse(board.isLineComplete(fila));
     }
 
     @Test
