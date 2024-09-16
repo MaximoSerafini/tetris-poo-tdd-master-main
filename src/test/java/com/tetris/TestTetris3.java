@@ -251,20 +251,4 @@ public class TestTetris3 {
     }
 
 
-    @Test
-    public void testLines() {
-        
-        Board board = new Board();
-        PieceStick piece1 = new PieceStick();
-        board.addPieceBoard(piece1);
-        piece1.moveDown(); //???
-    
-        // deberia de incluir chequear el final del juego
-        board.updateBoard();
-    
-    }
-    
-
-
-
 }

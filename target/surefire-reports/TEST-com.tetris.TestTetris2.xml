@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tetris.TestTetris1" time="0.115" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tetris.TestTetris2" time="0.017" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -59,11 +59,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="la_piece_t_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.016"/>
-  <testcase name="la_piece_LRight_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.007"/>
-  <testcase name="la_piece_DogRight_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0.002"/>
-  <testcase name="la_piece_Stick_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0"/>
-  <testcase name="la_piece_LLeft_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0"/>
-  <testcase name="la_piece_square_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0"/>
-  <testcase name="la_piece_DogLeft_tiene_la_forma_correcta" classname="com.tetris.TestTetris1" time="0"/>
+  <testcase name="girar_piezalLeft_derecha" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_palo_Der" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_palo_izq" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_piezalLeft_izquierda" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_DogLeft_derecha" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_piezalDer_izq" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_DogRight_izquierda" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_piezaT_izquierda" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_cubo_prueba" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_DogLeft_izquierda" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_piezaT_derecha" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_palo_Der_dos_veces" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_piezalDer_derecha" classname="com.tetris.TestTetris2" time="0"/>
+  <testcase name="girar_DogRight_derecha" classname="com.tetris.TestTetris2" time="0"/>
 </testsuite>
