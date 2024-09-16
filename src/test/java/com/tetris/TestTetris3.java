@@ -56,11 +56,13 @@ public class TestTetris3 {
         PieceSquare pieceSquar = new PieceSquare();
         board.addPieceBoard(pieceSquar);
 
+        assertEquals(0, pieceSquar.getY());
+
 
         pieceSquar.startTimer();
         try {
             // Espera 1 segundo para permitir solo un descenso
-            Thread.sleep(500); // Ajusta el valor si es necesario
+            Thread.sleep(100); // Ajusta el valor si es necesario
         } catch (InterruptedException e) {
             
         }
@@ -69,8 +71,78 @@ public class TestTetris3 {
 
         // Verifica que la pieza solo haya descendido una o dos posiciones
         assertEquals(2, pieceSquar.getY()); // Ajusta según la lógica
-
     }
+
+    @Test
+    public void test_clock_pieceT(){
+        Board board = new Board();
+        PieceT piecet = new PieceT();
+        board.addPieceBoard(piecet);
+
+        assertEquals(0, piecet.getY());
+
+
+        piecet.startTimer();
+        try {
+            // Espera 1 segundo para permitir solo un descenso
+            Thread.sleep(100); // Ajusta el valor si es necesario
+        } catch (InterruptedException e) {
+            
+        }
+
+        piecet.stopTimer();
+
+        // Verifica que la pieza solo haya descendido una o dos posiciones
+        assertEquals(2, piecet.getY()); // Ajusta según la lógica
+    }
+
+    @Test
+    public void test_clock_pieceDog(){
+        Board board = new Board();
+        PieceDogLeft pieceDogL = new PieceDogLeft();
+        board.addPieceBoard(pieceDogL);
+
+        assertEquals(0, pieceDogL.getY());
+
+
+        pieceDogL.startTimer();
+        try {
+            // Espera 1 segundo para permitir solo un descenso
+            Thread.sleep(100); // Ajusta el valor si es necesario
+        } catch (InterruptedException e) {
+            
+        }
+
+        pieceDogL.stopTimer();
+
+        // Verifica que la pieza solo haya descendido una o dos posiciones
+        assertEquals(2, pieceDogL.getY()); // Ajusta según la lógica
+    }
+
+    @Test
+    public void test_clock_pieceL(){
+        Board board = new Board();
+        PieceLLeft pieceL = new PieceLLeft();
+        board.addPieceBoard(pieceL);
+
+        assertEquals(0, pieceL.getY());
+
+
+        pieceL.startTimer();
+        try {
+            // Espera 1 segundo para permitir solo un descenso
+            Thread.sleep(100); // Ajusta el valor si es necesario
+        } catch (InterruptedException e) {
+            
+        }
+
+        pieceL.stopTimer();
+
+        // Verifica que la pieza solo haya descendido una o dos posiciones
+        assertEquals(2, pieceL.getY()); // Ajusta según la lógica
+    }
+
+
     
     @Test
     public void testPieceDog_Baja_dos_veces() {
