@@ -46,25 +46,19 @@ public class Board {
     } 
 
     public boolean moveDown() {
-        if (pieceActual == null) {
-            return false;
-        }
-    
-        int currentY = pieceActual.getY(); // Coordenada actual 'y'
-    
-        // Intenta mover la pieza hacia abajo
+        int currentY = pieceActual.getY();
         pieceActual.setY(currentY + 1);
     
-        // Verifica si la pieza sigue dentro de los límites después del movimiento
-        if (!LimitesVeri(pieceActual)) {
-            // Si se sale del límite, mueve la pieza una fila hacia arriba
-            pieceActual.setY(currentY);
-            return false; // El movimiento no fue posible
+        // Verifica si el movimiento está dentro de los límites del tablero
+        if (!isWithinBounds()) {
+            pieceActual.setY(currentY); // Revertir el movimiento si está fuera de los límites
         }
-    
-        // Actualiza el tablero con la nueva posición de la pieza
-        updateBoard();
         return true; // Movimiento válido
+    }
+    
+    // Asegúrate de que este método también esté bien implementado
+    private boolean isWithinBounds() {
+        return pieceActual.getY() < 20 - pieceActual.getShape()[0].length;
     }
 
     public boolean moveRight() {
