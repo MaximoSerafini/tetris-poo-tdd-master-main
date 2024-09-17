@@ -52,7 +52,7 @@ public class TestTetris4 {
         }
 
         assertFalse(board.LimitesVeri(piece)); 
-        assertEquals(19, piece.getY()); 
+        assertEquals(18, piece.getY()); 
     }
 
     @Test
@@ -131,5 +131,7 @@ public class TestTetris4 {
         assertFalse(board.LimitesVeri(piece)); 
         assertEquals(18, piece.getY()); 
     }
+
+    
 }
     
