@@ -85,9 +85,8 @@ public class TestTetris5 {
 
     }
 
-    @Test
-    public void testFinalJuegoLose() {
 
+<<<<<<< HEAD
         Board board = new Board();
         PieceDogRight piece = new PieceDogRight();
         boolean puedeSeguir = true;
@@ -108,5 +107,7 @@ public class TestTetris5 {
         assertFalse(board.checkFinalDelJuego()); //retorna false
 
     }
+=======
+>>>>>>> 25e42e582a516b18b2a2dcfea3c99e531a6fd0fc
 
 }
