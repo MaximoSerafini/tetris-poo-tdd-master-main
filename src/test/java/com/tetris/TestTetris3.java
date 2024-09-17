@@ -214,7 +214,7 @@ public class TestTetris3 {
 
         assertTrue(board.LimitesVeri(piece));
     }
-
+ 
     @Test
     public void testPieceDog_se_mueve_a_la_izquierda() { // no anda por que pasa el limite, esta bien
         Board board = new Board();

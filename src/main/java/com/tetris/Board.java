@@ -70,6 +70,8 @@ public class Board {
             pieceActual.setY(currentX); // Si se sale, vuelve a la posición anterior
             return false; // El movimiento no fue posible
         }
+
+        pieceActual.moveDown();
     
         // Actualiza el tablero con la nueva posición de la pieza
         updateBoard();
@@ -89,7 +91,9 @@ public class Board {
             pieceActual.setY(currentX); // Si se sale, vuelve a la posición anterior
             return false; // El movimiento no fue posible
         }
-    
+        
+        pieceActual.moveDown();
+
         // Actualiza el tablero con la nueva posición de la pieza
         updateBoard();
         return true; // Movimiento válido
