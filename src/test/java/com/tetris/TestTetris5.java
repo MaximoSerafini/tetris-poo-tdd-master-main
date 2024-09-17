@@ -91,22 +91,21 @@ public class TestTetris5 {
         Board board = new Board();
         PieceDogRight piece = new PieceDogRight();
         boolean puedeSeguir = true;
-        board.addPieceBoard(piece);
         
         while (puedeSeguir) {
 
             board.addPieceBoard(piece);
 
-            if (!board.LimitesVeri(piece)) {
+            if (!board.LimitesVeri(piece)) { //si es falso, es decir si no se puede agregar
                 puedeSeguir = false; //corto
             } else {
-                while (board.LimitesVeri(piece)) {
-                    piece.moveDown();
+                while (board.LimitesVeri(piece)) { //mientras se pueda mover la piece
+                    piece.moveDown(); 
                 }
             }
         }
 
-        assertFalse(board.checkFinalDelJuego());
+        assertFalse(board.checkFinalDelJuego()); //retorna false
 
     }
 
