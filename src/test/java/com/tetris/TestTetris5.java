@@ -84,30 +84,4 @@ public class TestTetris5 {
         assertTrue(board.checkFinalDelJuego()); // Se gana el juego retorna true
 
     }
-
-
-<<<<<<< HEAD
-        Board board = new Board();
-        PieceDogRight piece = new PieceDogRight();
-        boolean puedeSeguir = true;
-        
-        while (puedeSeguir) {
-
-            board.addPieceBoard(piece);
-
-            if (!board.LimitesVeri(piece)) { //si es falso, es decir si no se puede agregar
-                puedeSeguir = false; //corto
-            } else {
-                while (board.LimitesVeri(piece)) { //mientras se pueda mover la piece
-                    piece.moveDown(); 
-                }
-            }
-        }
-
-        assertFalse(board.checkFinalDelJuego()); //retorna false
-
-    }
-=======
->>>>>>> 25e42e582a516b18b2a2dcfea3c99e531a6fd0fc
-
 }
