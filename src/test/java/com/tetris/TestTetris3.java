@@ -107,16 +107,14 @@ public class TestTetris3 {
 
         pieceDogL.startTimer();
         try {
-            // Espera 1 segundo para permitir solo un descenso
-            Thread.sleep(100); // Ajusta el valor si es necesario
+            Thread.sleep(100); 
         } catch (InterruptedException e) {
             
         }
 
         pieceDogL.stopTimer();
 
-        // Verifica que la pieza solo haya descendido una o dos posiciones
-        assertEquals(2, pieceDogL.getY()); // Ajusta según la lógica
+        assertEquals(2, pieceDogL.getY()); 
     }
 
     @Test

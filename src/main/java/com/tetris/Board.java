@@ -50,15 +50,16 @@ public class Board {
         pieceActual.setY(currentY + 1);
     
         // Verifica si el movimiento está dentro de los límites del tablero
-        if (!isWithinBounds()) {
+        if (!LimitesVeri(pieceActual)) {
             pieceActual.setY(currentY); // Revertir el movimiento si está fuera de los límites
+            return false; // Movimiento inválido, la pieza no puede moverse más abajo
         }
         return true; // Movimiento válido
     }
     
-    // Asegúrate de que este método también esté bien implementado
     private boolean isWithinBounds() {
-        return pieceActual.getY() < 20 - pieceActual.getShape()[0].length;
+        int pieceHeight = pieceActual.getPiece().length; // Altura de la pieza
+        return pieceActual.getY() + pieceHeight <= alto; // Verifica si la pieza completa está dentro del tablero
     }
 
     public boolean moveRight() {
