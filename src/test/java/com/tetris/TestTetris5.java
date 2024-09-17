@@ -52,16 +52,36 @@ public class TestTetris5 {
 
     @Test
     public void testClearLinea() {
-        
+        Board board = new Board();
+
+        for (int i = 0; i < 10; i++) {
+            board.grid[19][i] = 1; 
+            board.grid[18][i] = 1;
+        }
+
+        int linesCleared = board.clearLinea();
+        assertEquals(2, linesCleared);
+
+        for (int i = 18; i <= 19; i++) {
+            for (int j = 0; j < 10; j++) {
+                assertEquals(0, board.grid[i][j]);
+            }
+        }
     }
 
     @Test
-    public void testCheckFinalDelJuego() {
+    public void testFinalJuego() {
+        Board board = new Board();
         
+        for (int i = 0; i < 10; i++) {
+            board.grid[15][i] = 1;
+            board.grid[16][i] = 1;
+            board.grid[17][i] = 1;
+            board.grid[18][i] = 1;
+            board.grid[19][i] = 1;
+        }
+
+        assertTrue(board.checkFinalDelJuego());
     }
-
-    
-
-
 
 }

@@ -167,12 +167,10 @@ public class Board {
         return linesCleared;
     }
 
-    public void checkFinalDelJuego() {
+    public boolean checkFinalDelJuego() { //se modifico por boolean
         int linesCleareds = clearLinea();
         totalCleared += linesCleareds;
-
-        if (totalCleared >= linesToClear) { //se llega al requerimiento de 5 lineas
-            //acá terminamos el juego!
-        }
+    
+        return totalCleared >= linesToClear;
     }
 }
