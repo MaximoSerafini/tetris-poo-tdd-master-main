@@ -1,6 +1,5 @@
 package com.tetris;
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 //import static org.junit.Assert.assertEquals;
@@ -280,6 +279,55 @@ public class TestTetris2 {
 
         board.addPieceBoard(piece); 
 
+        piece.rotateRandom(); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void girar_piezaLRight_random(){
+        PieceLRight piece = new PieceLRight();
+        Board board = new Board();
+
+        board.addPieceBoard(piece); 
+
+        piece.rotateRandom(); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void girar_piezaSquare_random(){
+        PieceSquare piece = new PieceSquare();
+        Board board = new Board();
+
+        board.addPieceBoard(piece); 
+
+        piece.rotateRandom(); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void girar_piezaStick_random(){
+        PieceStick piece = new PieceStick();
+        Board board = new Board();
+
+        board.addPieceBoard(piece); 
+
+        piece.rotateRandom(); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void girar_2_veces_piezaStick_random(){
+        PieceStick piece = new PieceStick();
+        Board board = new Board();
+
+        board.addPieceBoard(piece); 
+
+        piece.rotateRandom(); 
         piece.rotateRandom(); 
 
         assertTrue(board.LimitesVeri(piece));
