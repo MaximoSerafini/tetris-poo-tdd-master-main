@@ -1,4 +1,5 @@
 package com.tetris;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -11,6 +12,7 @@ public class Piece{
     private ClockDemo clock;
     private Timer timer;
     public int[][] shape;
+    private final Random random_rot = new Random();
     
     
     public Piece() {
@@ -54,6 +56,17 @@ public class Piece{
 
     public int getY(){
         return y; 
+    }
+
+    public void rotateRandom() {
+        
+        int num = random_rot.nextInt(2);
+    
+        if (num == 1) {
+            rotateIzq();
+        } else {
+            rotateDer();
+        }
     }
 
     //rotacion sentido horario
