@@ -56,11 +56,6 @@ public class Board {
         }
         return true; // Movimiento válido
     }
-    
-    private boolean isWithinBounds() {
-        int pieceHeight = pieceActual.getPiece().length; // Altura de la pieza
-        return pieceActual.getY() + pieceHeight <= alto; // Verifica si la pieza completa está dentro del tablero
-    }
 
     public boolean moveRight() {
         if (pieceActual == null) {
