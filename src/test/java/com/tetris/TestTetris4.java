@@ -66,9 +66,6 @@ public class TestTetris4 {
             piece.moveDown();
         }
         
-
-
-        
         assertFalse(board.LimitesVeri(piece));
         assertEquals(17, piece.getY()); 
     }
@@ -77,6 +74,38 @@ public class TestTetris4 {
     public void testPieceLNoPuedeBajarMas() {
         Board board = new Board();          
         PieceLLeft piece = new PieceLLeft(); 
+
+        board.addPieceBoard(piece);
+
+        while (board.LimitesVeri(piece)) {
+            piece.moveDown();
+        }
+        
+
+        assertFalse(board.LimitesVeri(piece)); 
+        assertEquals(18, piece.getY()); 
+    }
+
+    @Test
+    public void testPieceDogLeftNoPuedeBajarMas() {
+        Board board = new Board();          
+        PieceDogLeft piece = new PieceDogLeft(); 
+
+        board.addPieceBoard(piece);
+
+        while (board.LimitesVeri(piece)) {
+            piece.moveDown();
+        }
+        
+
+        assertFalse(board.LimitesVeri(piece)); 
+        assertEquals(18, piece.getY()); 
+    }
+
+    @Test
+    public void testPieceDogRightNoPuedeBajarMas() {
+        Board board = new Board();          
+        PieceDogRight piece = new PieceDogRight(); 
 
         board.addPieceBoard(piece);
 
