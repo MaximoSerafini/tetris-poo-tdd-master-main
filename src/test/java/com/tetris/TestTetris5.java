@@ -70,7 +70,7 @@ public class TestTetris5 {
     }
 
     @Test
-    public void testFinalJuego() {
+    public void testFinalJuegoWin() {
         Board board = new Board();
         
         for (int i = 0; i < 10; i++) {
@@ -81,7 +81,33 @@ public class TestTetris5 {
             board.grid[19][i] = 1;
         }
 
-        assertTrue(board.checkFinalDelJuego());
+        assertTrue(board.checkFinalDelJuego()); // Se gana el juego retorna true
+
+    }
+
+    @Test
+    public void testFinalJuegoLose() {
+
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        boolean puedeSeguir = true;
+        board.addPieceBoard(piece);
+        
+        while (puedeSeguir) {
+
+            board.addPieceBoard(piece);
+
+            if (!board.LimitesVeri(piece)) {
+                puedeSeguir = false; //corto
+            } else {
+                while (board.LimitesVeri(piece)) {
+                    piece.moveDown();
+                }
+            }
+        }
+
+        assertFalse(board.checkFinalDelJuego());
+
     }
 
 }
