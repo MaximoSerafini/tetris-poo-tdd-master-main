@@ -84,7 +84,4 @@ public class TestTetris5 {
         assertTrue(board.checkFinalDelJuego()); // Se gana el juego retorna true
 
     }
-
-
-
 }
