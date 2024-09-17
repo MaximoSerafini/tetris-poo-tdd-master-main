@@ -102,7 +102,7 @@ public class Piece{
                 clock.tic();  // +1 seg
                 moveDown();   // pieza 1 pos abajo
             }
-        }, 0, 1000);  // periodo de 1seg
+        }, 0, 2000);  // periodo de 1seg
     }
 
     //stop para el timer una vez que finaliza
