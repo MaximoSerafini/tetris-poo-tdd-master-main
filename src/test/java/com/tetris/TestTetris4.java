@@ -9,7 +9,7 @@ public class TestTetris4 {
     @Test
     public void testPieceDogNoPuedeBajarMas() {
         Board board = new Board();          
-        PieceDogLeft piece = new PieceDogLeft(); // Usando PieceStick como ejemplo
+        PieceDogLeft piece = new PieceDogLeft(); 
 
         board.addPieceBoard(piece);
 
@@ -26,41 +26,39 @@ public class TestTetris4 {
     @Test
     public void testPieceSquareNoPuedeBajarMas() {
         Board board = new Board();          
-        PieceSquare piece = new PieceSquare(); // Usando PieceStick como ejemplo
+        PieceSquare piece = new PieceSquare(); 
 
         board.addPieceBoard(piece);
 
-        // Simula movimientos hacia abajo hasta que la pieza toque el suelo
         while (board.LimitesVeri(piece)) {
             piece.moveDown();
         }
 
-        // Verifica que la pieza no pueda bajar más, es decir, que toque el suelo
-        assertFalse(board.LimitesVeri(piece)); // La pieza no debería poder moverse más hacia abajo
-        assertEquals(19, piece.getY()); // Verifica que la pieza esté en la posición más baja
+
+        assertFalse(board.LimitesVeri(piece)); 
+        assertEquals(19, piece.getY()); 
     }
 
     @Test
     public void testPieceTNoPuedeBajarMas() {
         Board board = new Board();          
-        PieceT piece = new PieceT(); // Usando PieceStick como ejemplo
+        PieceT piece = new PieceT(); 
 
         board.addPieceBoard(piece);
 
-        // Simula movimientos hacia abajo hasta que la pieza toque el suelo
+
         while (board.LimitesVeri(piece)) {
             piece.moveDown();
         }
 
-        // Verifica que la pieza no pueda bajar más, es decir, que toque el suelo
-        assertFalse(board.LimitesVeri(piece)); // La pieza no debería poder moverse más hacia abajo
-        assertEquals(19, piece.getY()); // Verifica que la pieza esté en la posición más baja
+        assertFalse(board.LimitesVeri(piece)); 
+        assertEquals(19, piece.getY()); 
     }
 
     @Test
     public void testPieceStickNoPuedeBajarMas() {
         Board board = new Board();          
-        PieceStick piece = new PieceStick(); // Usando PieceStick como ejemplo
+        PieceStick piece = new PieceStick(); 
 
         board.addPieceBoard(piece);
 
@@ -70,9 +68,25 @@ public class TestTetris4 {
         
 
 
-        // Verifica que la pieza no pueda bajar más, es decir, que toque el suelo
-        assertFalse(board.LimitesVeri(piece)); // La pieza no debería poder moverse más hacia abajo
-        assertEquals(17, piece.getY()); // La posición y esperada es 16
+        
+        assertFalse(board.LimitesVeri(piece));
+        assertEquals(17, piece.getY()); 
+    }
+
+    @Test
+    public void testPieceLNoPuedeBajarMas() {
+        Board board = new Board();          
+        PieceLLeft piece = new PieceLLeft(); 
+
+        board.addPieceBoard(piece);
+
+        while (board.LimitesVeri(piece)) {
+            piece.moveDown();
+        }
+        
+
+        assertFalse(board.LimitesVeri(piece)); 
+        assertEquals(18, piece.getY()); 
     }
 }
     
