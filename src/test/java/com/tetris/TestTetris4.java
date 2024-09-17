@@ -132,6 +132,31 @@ public class TestTetris4 {
         assertEquals(18, piece.getY()); 
     }
 
+    @Test
+    public void testFinalJuegoLose() {
+
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        boolean puedeSeguir = true;
+        board.addPieceBoard(piece);
+        
+        while (puedeSeguir) {
+
+            board.addPieceBoard(piece);
+
+            if (!board.LimitesVeri(piece)) {
+                puedeSeguir = false; //corto
+            } else {
+                while (board.LimitesVeri(piece)) {
+                    piece.moveDown();
+                }
+            }
+        }
+
+        assertFalse(board.checkFinalDelJuego());
+
+    }
+
     
 }
     
