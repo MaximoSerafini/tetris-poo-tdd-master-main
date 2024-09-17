@@ -71,7 +71,7 @@ public class TestTetris4 {
     }
 
     @Test
-    public void testPieceLNoPuedeBajarMas() {
+    public void testPieceLLeftNoPuedeBajarMas() {
         Board board = new Board();          
         PieceLLeft piece = new PieceLLeft(); 
 
@@ -82,6 +82,20 @@ public class TestTetris4 {
         }
         
 
+        assertFalse(board.LimitesVeri(piece)); 
+        assertEquals(18, piece.getY()); 
+    }
+    @Test
+    public void testPieceLRighttNoPuedeBajarMas() {
+        Board board = new Board();          
+        PieceLRight piece = new PieceLRight(); 
+
+        board.addPieceBoard(piece);
+
+        while (board.LimitesVeri(piece)) {
+            piece.moveDown();
+        }
+        
         assertFalse(board.LimitesVeri(piece)); 
         assertEquals(18, piece.getY()); 
     }
