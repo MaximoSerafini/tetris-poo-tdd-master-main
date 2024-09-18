@@ -264,5 +264,20 @@ public class TestTetris3 {
         assertTrue(board.LimitesVeri(piece));
     }
 
+    @Test
+    public void testPieceDog_se_mueve_a_la_izquierda_en_0_0() { 
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        board.addPieceBoard(piece); 
+
+        piece.setX(0);
+
+        piece.moveLeft(); 
+
+        assertEquals(-1, piece.getX()); 
+
+        assertFalse(board.LimitesVeri(piece));
+    }
+
 
 }
