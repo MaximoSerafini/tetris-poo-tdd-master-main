@@ -52,7 +52,6 @@ public class Board {
         // Verifica si el movimiento está dentro de los límites del tablero
         if (!LimitesVeri(pieceActual)) {
             pieceActual.setY(currentY); // Revertir el movimiento si está fuera de los límites
-            return false; // Movimiento inválido, la pieza no puede moverse más abajo
         }
         return true; // Movimiento válido
     }
@@ -62,13 +61,12 @@ public class Board {
             return false;
         }
     
-        int currentX = pieceActual.getX(); // Coordenada actual 'y'
-        pieceActual.setX(currentX + 1); // Mueve la pieza hacia abajo
+        int currentX = pieceActual.getX(); // Coordenada actual 'x'
+        pieceActual.setX(currentX + 1); 
     
         // Verifica si la pieza sigue dentro de los límites después del movimiento
         if (!LimitesVeri(pieceActual)) {
-            pieceActual.setY(currentX); // Si se sale, vuelve a la posición anterior
-            return false; // El movimiento no fue posible
+            pieceActual.setY(currentX); 
         }
 
         pieceActual.moveDown();
@@ -83,13 +81,12 @@ public class Board {
             return false;
         }
     
-        int currentX = pieceActual.getX(); // Coordenada actual 'y'
-        pieceActual.setX(currentX - 1); // Mueve la pieza hacia abajo
+        int currentX = pieceActual.getX(); // Coordenada actual 'x'
+        pieceActual.setX(currentX - 1); 
     
         // Verifica si la pieza sigue dentro de los límites después del movimiento
         if (!LimitesVeri(pieceActual)) {
             pieceActual.setY(currentX); // Si se sale, vuelve a la posición anterior
-            return false; // El movimiento no fue posible
         }
         
         pieceActual.moveDown();

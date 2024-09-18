@@ -216,7 +216,7 @@ public class TestTetris3 {
     }
  
     @Test
-    public void testPieceDog_se_mueve_a_la_izquierda() { // no anda por que pasa el limite, esta bien
+    public void testPieceDog_se_mueve_a_la_izquierda() { 
         Board board = new Board();
         PieceDogRight piece = new PieceDogRight();
         board.addPieceBoard(piece); 
@@ -229,7 +229,7 @@ public class TestTetris3 {
     }
 
     @Test
-    public void testPieceDog_se_mueve_a_la_derecha_dos_veces_y_va_a_la_izquierda() { // no anda por que pasa el limite, esta bien
+    public void testPieceDog_se_mueve_a_la_derecha_dos_veces_y_va_a_la_izquierda() { 
         Board board = new Board();
         PieceDogRight piece = new PieceDogRight();
         board.addPieceBoard(piece); 
@@ -243,6 +243,21 @@ public class TestTetris3 {
         assertEquals(2, piece.getX()); 
 
         piece.moveLeft(); 
+
+        assertEquals(1, piece.getX()); 
+
+        assertTrue(board.LimitesVeri(piece));
+    }
+
+    @Test
+    public void testPieceDog_se_mueve_a_la_derecha_en_0_0() { 
+        Board board = new Board();
+        PieceDogRight piece = new PieceDogRight();
+        board.addPieceBoard(piece); 
+
+
+        piece.setX(0);
+        piece.moveRight(); 
 
         assertEquals(1, piece.getX()); 
 

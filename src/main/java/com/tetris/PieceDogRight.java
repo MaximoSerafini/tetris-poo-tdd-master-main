@@ -7,7 +7,7 @@ public class PieceDogRight extends Piece{
             {0, 1, 1},
             {1, 1, 0}
         });
-    }
+    }   
 }
 
 
